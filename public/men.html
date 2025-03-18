@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Clothing</title>
+    <link rel="stylesheet" href="../assests/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <button class="nav-toggle">☰ Menu</button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="girls.html">Girls</a></li>
+        <li><a href="boys.html">Boys</a></li>
+        <li><a href="footwear.html">Footwear</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+
+    <h1>Men's Clothing</h1>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for items..."
+        onkeyup="searchItems()"
+      />
+      <button onclick="searchItems()">Search</button>
+    </div>
+
+    <div class="filter-container">
+      <label for="priceRange">Filter by price:</label>
+      <input type="range" id="priceRange" min="0" max="200" step="5" oninput="filterByPrice(this.value)">
+      <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="product-container" id="productContainer">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="men_shirt1.jpg" alt="Men Shirt 1" />
+        <h2>Men Shirt 1</h2>
+        <p>Price: $35</p>
+        <button onclick="addToCart('Men Shirt 1', 35)">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="men_shirt2.jpg" alt="Men Shirt 2" />
+        <h2>Men Shirt 2</h2>
+        <p>Price: $40</p>
+        <button onclick="addToCart('Men Shirt 2', 40)">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="men_tshirt1.jpg" alt="Men T-shirt 1" />
+        <h2>Men T-shirt 1</h2>
+        <p>Price: $25</p>
+        <button onclick="addToCart('Men T-shirt 1', 25)">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="men_tshirt2.jpg" alt="Men T-shirt 2" />
+        <h2>Men T-shirt 2</h2>
+        <p>Price: $28</p>
+        <button onclick="addToCart('Men T-shirt 2', 28)">Add to Cart</button>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product">
+        <img src="men_jacket1.jpg" alt="Men Jacket 1" />
+        <h2>Men Jacket 1</h2>
+        <p>Price: $65</p>
+        <button onclick="addToCart('Men Jacket 1', 65)">Add to Cart</button>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product">
+        <img src="men_jacket2.jpg" alt="Men Jacket 2" />
+        <h2>Men Jacket 2</h2>
+        <p>Price: $70</p>
+        <button onclick="addToCart('Men Jacket 2', 70)">Add to Cart</button>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product">
+        <img src="men_shirt3.jpg" alt="Men Shirt 3" />
+        <h2>Men Shirt 3</h2>
+        <p>Price: $40</p>
+        <button onclick="addToCart('Men Shirt 3', 40)">Add to Cart</button>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product">
+        <img src="men_shirt4.jpg" alt="Men Shirt 4" />
+        <h2>Men Shirt 4</h2>
+        <p>Price: $45</p>
+        <button onclick="addToCart('Men Shirt 4', 45)">Add to Cart</button>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product">
+        <img src="men_tshirt3.jpg" alt="Men T-shirt 3" />
+        <h2>Men T-shirt 3</h2>
+        <p>Price: $22</p>
+        <button onclick="addToCart('Men T-shirt 3', 22)">Add to Cart</button>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product">
+        <img src="men_tshirt4.jpg" alt="Men T-shirt 4" />
+        <h2>Men T-shirt 4</h2>
+        <p>Price: $26</p>
+        <button onclick="addToCart('Men T-shirt 4', 26)">Add to Cart</button>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product">
+        <img src="men_jacket3.jpg" alt="Men Jacket 3" />
+        <h2>Men Jacket 3</h2>
+        <p>Price: $75</p>
+        <button onclick="addToCart('Men Jacket 3', 75)">Add to Cart</button>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product">
+        <img src="men_jacket4.jpg" alt="Men Jacket 4" />
+        <h2>Men Jacket 4</h2>
+        <p>Price: $80</p>
+        <button onclick="addToCart('Men Jacket 4', 80)">Add to Cart</button>
+      </div>
+
+      <!-- Product 13 -->
+      <div class="product">
+        <img src="men_sweater1.jpg" alt="Men Sweater 1" />
+        <h2>Men Sweater 1</h2>
+        <p>Price: $50</p>
+        <button onclick="addToCart('Men Sweater 1', 50)">Add to Cart</button>
+      </div>
+
+      <!-- Product 14 -->
+      <div class="product">
+        <img src="men_sweater2.jpg" alt="Men Sweater 2" />
+        <h2>Men Sweater 2</h2>
+        <p>Price: $55</p>
+        <button onclick="addToCart('Men Sweater 2', 55)">Add to Cart</button>
+      </div>
+
+      <!-- Product 15 -->
+      <div class="product">
+        <img src="men_pants1.jpg" alt="Men Pants 1" />
+        <h2>Men Pants 1</h2>
+        <p>Price: $45</p>
+        <button onclick="addToCart('Men Pants 1', 45)">Add to Cart</button>
+      </div>
+
+      <!-- Product 16 -->
+      <div class="product">
+        <img src="men_pants2.jpg" alt="Men Pants 2" />
+        <h2>Men Pants 2</h2>
+        <p>Price: $50</p>
+        <button onclick="addToCart('Men Pants 2', 50)">Add to Cart</button>
+      </div>
+
+      <!-- Product 17 -->
+      <div class="product">
+        <img src="men_shorts1.jpg" alt="Men Shorts 1" />
+        <h2>Men Shorts 1</h2>
+        <p>Price: $30</p>
+        <button onclick="addToCart('Men Shorts 1', 30)">Add to Cart</button>
+      </div>
+
+      <!-- Product 18 -->
+      <div class="product">
+        <img src="men_shorts2.jpg" alt="Men Shorts 2" />
+        <h2>Men Shorts 2</h2>
+        <p>Price: $32</p>
+        <button onclick="addToCart('Men Shorts 2', 32)">Add to Cart</button>
+      </div>
+
+      <!-- Product 19 -->
+      <div class="product">
+        <img src="men_suit1.jpg" alt="Men Suit 1" />
+        <h2>Men Suit 1</h2>
+        <p>Price: $150</p>
+        <button onclick="addToCart('Men Suit 1', 150)">Add to Cart</button>
+      </div>
+
+      <!-- Product 20 -->
+      <div class="product">
+        <img src="men_suit2.jpg" alt="Men Suit 2" />
+        <h2>Men Suit 2</h2>
+        <p>Price: $170</p>
+        <button onclick="addToCart('Men Suit 2', 170)">Add to Cart</button>
+      </div>
+
+      <!-- Product 21 -->
+      <div class="product">
+        <img src="men_hoodie1.jpg" alt="Men Hoodie 1" />
+        <h2>Men Hoodie 1</h2>
+        <p>Price: $60</p>
+        <button onclick="addToCart('Men Hoodie 1', 60)">Add to Cart</button>
+      </div>
+
+      <!-- Product 22 -->
+      <div class="product">
+        <img src="men_hoodie2.jpg" alt="Men Hoodie 2" />
+        <h2>Men Hoodie 2</h2>
+        <p>Price: $65</p>
+        <button onclick="addToCart('Men Hoodie 2', 65)">Add to Cart</button>
+      </div>
+
+      <!-- Product 23 -->
+      <div class="product">
+        <img src="men_jogger1.jpg" alt="Men Jogger 1" />
+        <h2>Men Jogger 1</h2>
+        <p>Price: $35</p>
+        <button onclick="addToCart('Men Jogger 1', 35)">Add to Cart</button>
+      </div>
+
+      <!-- Product 24 -->
+      <div class="product">
+        <img src="men_jogger2.jpg" alt="Men Jogger 2" />
+        <h2>Men Jogger 2</h2>
+        <p>Price: $38</p>
+        <button onclick="addToCart('Men Jogger 2', 38)">Add to Cart</button>
+      </div>
+
+      <!-- Product 25 -->
+      <div class="product">
+        <img src="men_blazer1.jpg" alt="Men Blazer 1" />
+        <h2>Men Blazer 1</h2>
+        <p>Price: $110</p>
+        <button onclick="addToCart('Men Blazer 1', 110)">Add to Cart</button>
+      </div>
+
+      <!-- Product 26 -->
+      <div class="product">
+        <img src="men_blazer2.jpg" alt="Men Blazer 2" />
+        <h2>Men Blazer 2</h2>
+        <p>Price: $120</p>
+        <button onclick="addToCart('Men Blazer 2', 120)">Add to Cart</button>
+      </div>
+
+      <!-- Product 27 -->
+      <div class="product">
+        <img src="men_vneck1.jpg" alt="Men V-neck 1" />
+        <h2>Men V-neck 1</h2>
+        <p>Price: $28</p>
+        <button onclick="addToCart('Men V-neck 1', 28)">Add to Cart</button>
+      </div>
+
+      <!-- Product 28 -->
+      <div class="product">
+        <img src="men_vneck2.jpg" alt="Men V-neck 2" />
+        <h2>Men V-neck 2</h2>
+        <p>Price: $30</p>
+        <button onclick="addToCart('Men V-neck 2', 30)">Add to Cart</button>
+      </div>
+
+      <!-- Product 29 -->
+      <div class="product">
+        <img src="men_polo1.jpg" alt="Men Polo 1" />
+        <h2>Men Polo 1</h2>
+        <p>Price: $50</p>
+        <button onclick="addToCart('Men Polo 1', 50)">Add to Cart</button>
+      </div>
+
+      <!-- Product 30 -->
+      <div class="product">
+        <img src="men_polo2.jpg" alt="Men Polo 2" />
+        <h2>Men Polo 2</h2>
+        <p>Price: $55</p>
+        <button onclick="addToCart('Men Polo 2', 55)">Add to Cart</button>
+      </div>
+
+      <!-- Product 31 -->
+      <div class="product">
+        <img src="men_pants3.jpg" alt="Men Pants 3" />
+        <h2>Men Pants 3</h2>
+        <p>Price: $60</p>
+        <button onclick="addToCart('Men Pants 3', 60)">Add to Cart</button>
+      </div>
+
+      <!-- Product 32 -->
+      <div class="product">
+        <img src="men_sweater3.jpg" alt="Men Sweater 3" />
+        <h2>Men Sweater 3</h2>
+        <p>Price: $55</p>
+        <button onclick="addToCart('Men Sweater 3', 55)">Add to Cart</button>
+      </div>
+
+      <!-- Product 33 -->
+      <div class="product">
+        <img src="men_sweater4.jpg" alt="Men Sweater 4" />
+        <h2>Men Sweater 4</h2>
+        <p>Price: $60</p>
+        <button onclick="addToCart('Men Sweater 4', 60)">Add to Cart</button>
+      </div>
+
+      <!-- Product 34 -->
+      <div class="product">
+        <img src="men_jacket5.jpg" alt="Men Jacket 5" />
+        <h2>Men Jacket 5</h2>
+        <p>Price: $85</p>
+        <button onclick="addToCart('Men Jacket 5', 85)">Add to Cart</button>
+      </div>
+
+      <!-- Product 35 -->
+      <div class="product">
+        <img src="men_jacket6.jpg" alt="Men Jacket 6" />
+        <h2>Men Jacket 6</h2>
+        <p>Price: $90</p>
+        <button onclick="addToCart('Men Jacket 6', 90)">Add to Cart</button>
+      </div>
+
+      <!-- Product 36 -->
+      <div class="product">
+        <img src="men_blazer3.jpg" alt="Men Blazer 3" />
+        <h2>Men Blazer 3</h2>
+        <p>Price: $130</p>
+        <button onclick="addToCart('Men Blazer 3', 130)">Add to Cart</button>
+      </div>
+
+      <!-- Product 37 -->
+      <div class="product">
+        <img src="men_shorts3.jpg" alt="Men Shorts 3" />
+        <h2>Men Shorts 3</h2>
+        <p>Price: $33</p>
+        <button onclick="addToCart('Men Shorts 3', 33)">Add to Cart</button>
+      </div>
+
+      <!-- Product 38 -->
+      <div class="product">
+        <img src="men_polo3.jpg" alt="Men Polo 3" />
+        <h2>Men Polo 3</h2>
+        <p>Price: $60</p>
+        <button onclick="addToCart('Men Polo 3', 60)">Add to Cart</button>
+      </div>
+
+      <!-- Product 39 -->
+      <div class="product">
+        <img src="men_pants4.jpg" alt="Men Pants 4" />
+        <h2>Men Pants 4</h2>
+        <p>Price: $65</p>
+        <button onclick="addToCart('Men Pants 4', 65)">Add to Cart</button>
+      </div>
+
+      <!-- Product 40 -->
+      <div class="product">
+        <img src="men_jacket7.jpg" alt="Men Jacket 7" />
+        <h2>Men Jacket 7</h2>
+        <p>Price: $100</p>
+        <button onclick="addToCart('Men Jacket 7', 100)">Add to Cart</button>
+      </div>
+
+      <!-- Product 41 -->
+      <div class="product">
+        <img src="men_suit3.jpg" alt="Men Suit 3" />
+        <h2>Men Suit 3</h2>
+        <p>Price: $160</p>
+        <button onclick="addToCart('Men Suit 3', 160)">Add to Cart</button>
+      </div>
+
+      <!-- Product 42 -->
+      <div class="product">
+        <img src="men_tshirt5.jpg" alt="Men T-shirt 5" />
+        <h2>Men T-shirt 5</h2>
+        <p>Price: $23</p>
+        <button onclick="addToCart('Men T-shirt 5', 23)">Add to Cart</button>
+      </div>
+
+      <!-- Product 43 -->
+      <div class="product">
+        <img src="men_hoodie3.jpg" alt="Men Hoodie 3" />
+        <h2>Men Hoodie 3</h2>
+        <p>Price: $68</p>
+        <button onclick="addToCart('Men Hoodie 3', 68)">Add to Cart</button>
+      </div>
+
+      <!-- Product 44 -->
+      <div class="product">
+        <img src="men_hoodie4.jpg" alt="Men Hoodie 4" />
+        <h2>Men Hoodie 4</h2>
+        <p>Price: $72</p>
+        <button onclick="addToCart('Men Hoodie 4', 72)">Add to Cart</button>
+      </div>
+
+      <!-- Product 45 -->
+      <div class="product">
+        <img src="men_jacket8.jpg" alt="Men Jacket 8" />
+        <h2>Men Jacket 8</h2>
+        <p>Price: $95</p>
+        <button onclick="addToCart('Men Jacket 8', 95)">Add to Cart</button>
+      </div>
+
+      <!-- Product 46 -->
+      <div class="product">
+        <img src="men_tshirt6.jpg" alt="Men T-shirt 6" />
+        <h2>Men T-shirt 6</h2>
+        <p>Price: $24</p>
+        <button onclick="addToCart('Men T-shirt 6', 24)">Add to Cart</button>
+      </div>
+
+      <!-- Product 47 -->
+      <div class="product">
+        <img src="men_vneck3.jpg" alt="Men V-neck 3" />
+        <h2>Men V-neck 3</h2>
+        <p>Price: $32</p>
+        <button onclick="addToCart('Men V-neck 3', 32)">Add to Cart</button>
+      </div>
+
+      <!-- Product 48 -->
+      <div class="product">
+        <img src="men_suit4.jpg" alt="Men Suit 4" />
+        <h2>Men Suit 4</h2>
+        <p>Price: $180</p>
+        <button onclick="addToCart('Men Suit 4', 180)">Add to Cart</button>
+      </div>
+
+      <!-- Product 49 -->
+      <div class="product">
+        <img src="men_shorts4.jpg" alt="Men Shorts 4" />
+        <h2>Men Shorts 4</h2>
+        <p>Price: $35</p>
+        <button onclick="addToCart('Men Shorts 4', 35)">Add to Cart</button>
+      </div>
+
+      <!-- Product 50 -->
+      <div class="product">
+        <img src="men_sweater5.jpg" alt="Men Sweater 5" />
+        <h2>Men Sweater 5</h2>
+        <p>Price: $55</p>
+        <button onclick="addToCart('Men Sweater 5', 55)">Add to Cart</button>
+      </div>
+
+      <!-- Add more products here... -->
+    </div>
+
+    <div class="load-more-container">
+      <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
+    </div>
+    
+    <script src="../assests/js/script.js"></script>
+  </body>
+</html>

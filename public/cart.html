@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+</head>
+<body style="height: 100vh;">
+    <nav>
+        <button class="nav-toggle">☰ Menu</button>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="girls.html">Girls</a></li>
+            <li><a href="boys.html">Boys</a></li>
+            <li><a href="footwear.html">Footwear</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+        </ul>
+    </nav>
+
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items">
+
+    </div>
+    <button id="placeOrderButton" onclick="showOrderForm()" disabled>Place Order</button>
+
+    <div class="order-form" id="orderForm">
+        <h2>Order Form</h2>
+        <form action="https://sheetdb.io/api/v1/g45bi3iek5q9n" method="post" id="sheetdb-form">
+            <input type="text" name="data[name]" placeholder="Name" required>
+            <input type="text" name="data[address]" placeholder="Address" required>
+            <input type="number" maxlength="10" minlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="data[phone]" placeholder="Phone" required>
+            <!-- Hidden fields to store cart items and prices -->
+            <input type="hidden" name="data[items]" id="cart-items-input">
+            <input type="hidden" name="data[total_price]" id="cart-total-input">
+            <!-- Hidden field for timestamp -->
+            <input type="hidden" name="data[timestamp]" id="timestamp-input">
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    <script src="../assests/js/script.js"></script>
+    <script>
+        // Function to prepare cart data for submission
+        function prepareCartData() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let itemsList = '';
+            let totalPrice = 0;
+            
+            // Create a formatted string of all items
+            cart.forEach((item, index) => {
+                itemsList += `${item.item} (₹${item.price})${index < cart.length - 1 ? ', ' : ''}`;
+                totalPrice += parseFloat(item.price);
+            });
+            
+            // Set the values to hidden inputs
+            document.getElementById('cart-items-input').value = itemsList;
+            document.getElementById('cart-total-input').value = totalPrice.toFixed(2);
+            
+            // Add current timestamp
+            const now = new Date();
+            const timestampStr = now.toISOString().replace('T', ' ').substring(0, 19);
+            document.getElementById('timestamp-input').value = timestampStr;
+        }
+        
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          
+          // Prepare cart data before submission
+          prepareCartData();
+          
+          // Show confirmation alert before sending data to SheetDB
+          if(confirm('Your order is ready to be placed. Proceed with order submission?')) {
+            // Show processing message
+            alert('Processing your order...');
+            
+            fetch(form.action, {
+                method : "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+              // Clear cart after successful submission
+              localStorage.removeItem('cart');
+              alert('Order submitted successfully!');
+              window.location.href = 'home.html'; // Use location.href for better navigation
+            }).catch(error => {
+              console.error('Error:', error);
+              alert('There was an error submitting your order. Please try again.');
+            });
+          }
+        });
+    </script>
+</body>
+</html>

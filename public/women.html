@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+</head>
+<body>
+    <nav>
+        <button class="nav-toggle">☰ Menu</button>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="girls.html">Girls</a></li>
+            <li><a href="boys.html">Boys</a></li>
+            <li><a href="footwear.html">Footwear</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+        </ul>
+    </nav>
+
+    <h1>Women's Clothing</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for items..." onkeyup="searchItems()">
+        <button onclick="searchItems()">Search</button>
+    </div>
+
+    <div class="filter-container">
+        <label for="priceRange">Filter by price:</label>
+        <input type="range" id="priceRange" min="0" max="100" step="5" oninput="filterByPrice(this.value)">
+        <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="product-container" id="productContainer">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="women_saree1.jpg" alt="Women Saree 1">
+            <h2>Saree 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Saree 1', 80)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="women_half_saree1.jpg" alt="Women Half Saree 1">
+            <h2>Half Saree 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Half Saree 1', 75)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="women_chudidhar1.jpg" alt="Women Chudidhar 1">
+            <h2>Chudidhar 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Chudidhar 1', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="women_saree2.jpg" alt="Women Saree 2">
+            <h2>Saree 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Saree 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="women_half_saree2.jpg" alt="Women Half Saree 2">
+            <h2>Half Saree 2</h2>
+            <p>Price: ₹78</p>
+            <button onclick="addToCart('Half Saree 2', 78)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="women_chudidhar2.jpg" alt="Women Chudidhar 2">
+            <h2>Chudidhar 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Chudidhar 2', 65)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="women_saree3.jpg" alt="Women Saree 3">
+            <h2>Saree 3</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Saree 3', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="women_half_saree3.jpg" alt="Women Half Saree 3">
+            <h2>Half Saree 3</h2>
+            <p>Price: ₹95</p>
+            <button onclick="addToCart('Half Saree 3', 95)">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="women_chudidhar3.jpg" alt="Women Chudidhar 3">
+            <h2>Chudidhar 3</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Chudidhar 3', 70)">Add to Cart</button>
+        </div>
+
+        <!-- Additional Products -->
+        <div class="product">
+            <img src="women_dress1.jpg" alt="Women Dress 1">
+            <h2>Dress 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Dress 1', 50)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress2.jpg" alt="Women Dress 2">
+            <h2>Dress 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Dress 2', 55)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress3.jpg" alt="Women Dress 3">
+            <h2>Dress 3</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Dress 3', 60)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress4.jpg" alt="Women Dress 4">
+            <h2>Dress 4</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Dress 4', 65)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="women_dress5.jpg" alt="Women Dress 5">
+            <h2>Dress 5</h2>
+            <p>Price: ₹70</p>
+            <button onclick="addToCart('Dress 5', 70)">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="load-more-container">
+      <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
+    </div>
+    
+    <script src="../assests/js/script.js"></script>
+</body>
+</html>

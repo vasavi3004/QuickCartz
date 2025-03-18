@@ -1,0 +1,509 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../img/shopiee.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    filter: none; 
+}
+
+/* Navbar styling */
+/* Navbar styling */
+nav {
+    background-color: #333;
+    padding: 24px 20px;
+    position: relative;
+    margin: 0 0 25px 0;
+}
+
+.nav-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure button stays on top */
+}
+
+.nav-toggle:hover {
+    background-color: #666;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for menu appearance */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures the full area is clickable */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.login-button {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures the full area is clickable */
+}
+
+.login-button:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.logged-in {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 16px;
+    display: block; /* Ensures the full area is clickable */
+    pointer-events: auto; /* Enable hover effect and clickability */
+    cursor: pointer;
+}
+
+/* Consolidated media query for navbar responsiveness */
+@media (max-width: 768px) {
+    nav {
+        height: 4.6rem;
+        padding: 15px 20px; /* Slightly reduced padding for mobile */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 0; /* Override conflicting styles */
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+        display: block;
+        border-radius: 0;
+    }
+    
+    nav ul li a:hover {
+        background-color: #555;
+        border-radius: 0;
+    }
+}
+
+/* Rest of your CSS remains unchanged */
+/* Styles for login.html */
+#login-container, #register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#login-container h1, #register-container h1 {
+    color: #ff7f50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#login-container input, #register-container input, #login-container select, #register-container select, #login-container button, #register-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#login-container button, #register-container button {
+    background-color: #ff7f50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-container button:hover, #register-container button:hover {
+    background-color: #ff6347;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff7f50;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #ff6347;
+}
+
+@media (max-width: 500px) {
+    #login-container, #register-container {
+        padding: 20px;
+    }
+}
+
+/* Styles for women.html */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-container button:hover {
+    background-color: #e67e22;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Consolidated Product Styles */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 280px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.product h2 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .product {
+        max-width: 100%;
+    }
+}
+
+.no-results {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Styles for cart.html */
+#cart-items {
+    text-align: center;
+    margin: 20px;
+}
+
+.cart-item {
+    margin: 10px 0;
+}
+
+.filter-container {
+    text-align: right;
+    margin: 10px 74px;
+}
+
+#loadMoreButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    display: block; /* Ensure the button is a block element */
+    margin: 34px auto;
+}
+
+#placeOrderButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    display: block; /* Ensure the button is a block element */
+    margin: 34px auto; /* Center the button horizontally */
+    position: relative; /* For tooltip positioning */
+}
+
+#placeOrderButton:hover {
+    background-color: #555;
+}
+
+#placeOrderButton:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+#placeOrderButton:disabled::after {
+    content: 'Add an item to the cart';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#placeOrderButton:disabled:hover::after {
+    opacity: 1;
+}
+
+.remove-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #c0392b;
+}
+
+.order-form {
+    display: none;
+    margin: 20px;
+    text-align: center;
+}
+
+.order-form input {
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-form button {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-form button:hover {
+    background-color: #e67e22;
+}
+
+/* Styles for index.html */
+.offers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.offer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.offer h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Fixed dropdown menu styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  right: 0;
+}
+
+/* Fixed: Only show dropdown when logged in and hovering */
+.dropdown:hover .logged-in + .dropdown-content {
+  display: block;
+}
+
+/* Fixed: Always hide dropdown for regular login button */
+.login-button + .dropdown-content {
+  display: none !important;
+}
+
+/* Remove duplicate CSS rules that were causing conflicts */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear</title>
+    <link rel="stylesheet" href="../assests/css/style.css">  
+</head>
+<body>
+    <nav>
+        <button class="nav-toggle">☰ Menu</button>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="girls.html">Girls</a></li>
+            <li><a href="boys.html">Boys</a></li>
+            <li><a href="footwear.html">Footwear</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+        </ul>
+    </nav>
+
+    <h1>Footwear Collection</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for footwear..." onkeyup="searchItems()">
+        <button onclick="searchItems()">Search</button>
+    </div>
+
+    <div class="filter-container">
+        <label for="priceRange">Filter by price:</label>
+        <input type="range" id="priceRange" min="0" max="100" step="5" oninput="filterByPrice(this.value)">
+        <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="product-container" id="productContainer">
+        <!-- Men's Footwear -->
+        
+        <div class="product">
+            <img src="men_shoe1.jpg" alt="Men's Shoe 1">
+            <h2>Men's Shoe 1</h2>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Men\'s Shoe 1', 80)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="men_shoe2.jpg" alt="Men's Shoe 2">
+            <h2>Men's Shoe 2</h2>
+            <p>Price: ₹85</p>
+            <button onclick="addToCart('Men\'s Shoe 2', 85)">Add to Cart</button>
+        </div>
+
+        <!-- Women's Footwear -->
+        <div class="product">
+            <img src="women_shoe1.jpg" alt="Women's Shoe 1">
+            <h2>Women's Shoe 1</h2>
+            <p>Price: ₹75</p>
+            <button onclick="addToCart('Women\'s Shoe 1', 75)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="women_shoe2.jpg" alt="Women's Shoe 2">
+            <h2>Women's Shoe 2</h2>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Women\'s Shoe 2', 90)">Add to Cart</button>
+        </div>
+
+        <!-- Girls' Footwear -->
+      
+        <div class="product">
+            <img src="girls_shoe1.jpg" alt="Girls' Shoe 1">
+            <h2>Girls' Shoe 1</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Girls\' Shoe 1', 50)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="girls_shoe2.jpg" alt="Girls' Shoe 2">
+            <h2>Girls' Shoe 2</h2>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Girls\' Shoe 2', 55)">Add to Cart</button>
+        </div>
+
+        <!-- Boys' Footwear -->
+        
+        <div class="product">
+            <img src="boys_shoe1.jpg" alt="Boys' Shoe 1">
+            <h2>Boys' Shoe 1</h2>
+            <p>Price: ₹60</p>
+            <button onclick="addToCart('Boys\' Shoe 1', 60)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="boys_shoe2.jpg" alt="Boys' Shoe 2">
+            <h2>Boys' Shoe 2</h2>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Boys\' Shoe 2', 65)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="no-results" id="noResults" style="display: none;">No products found.</div>
+
+    <div class="load-more-container">
+      <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
+    </div>
+    
+    <script src="../assests/js/script.js"></script>
+</body>
+</html>

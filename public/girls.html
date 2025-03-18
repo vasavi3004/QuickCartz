@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Girls</title>
+    <link rel="stylesheet" href="../assests/css/style.css" />
+    <!-- Removed inline CSS -->
+  </head>
+  <body>
+    <nav>
+      <button class="nav-toggle">☰ Menu</button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="girls.html">Girls</a></li>
+        <li><a href="boys.html">Boys</a></li>
+        <li><a href="footwear.html">Footwear</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+
+    <h1>Girls Dresses</h1>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for items..."
+        onkeyup="searchItems()"
+      />
+      <button onclick="searchItems()">Search</button>
+    </div>
+
+    <div class="filter-container">
+      <label for="priceRange">Filter by price:</label>
+      <input type="range" id="priceRange" min="0" max="100" step="5" oninput="filterByPrice(this.value)" />
+      <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="product-container" id="productContainer">
+      <!-- Product Template -->
+      <div class="product">
+        <img src="girls_punjabi1.jpg" alt="Girls Punjabi 1" />
+        <h2>Girls Punjabi 1</h2>
+        <p>Price: ₹28</p>
+        <button onclick="addToCart('Girls Punjabi 1', 28)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt1.jpg" alt="Girls T-shirt 1" />
+        <h2>Girls T-shirt 1</h2>
+        <p>Price: ₹18</p>
+        <button onclick="addToCart('Girls T-shirt 1', 18)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress1.jpg" alt="Girls Slipless Dress 1" />
+        <h2>Girls Slipless Dress 1</h2>
+        <p>Price: ₹35</p>
+        <button onclick="addToCart('Girls Slipless Dress 1', 35)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress1.jpg" alt="Girls Night Dress 1" />
+        <h2>Girls Night Dress 1</h2>
+        <p>Price: ₹22</p>
+        <button onclick="addToCart('Girls Night Dress 1', 22)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings1.jpg" alt="Girls Leggings 1" />
+        <h2>Girls Leggings 1</h2>
+        <p>Price: ₹15</p>
+        <button onclick="addToCart('Girls Leggings 1', 15)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni1.jpg" alt="Girls Chunni 1" />
+        <h2>Girls Chunni 1</h2>
+        <p>Price: ₹12</p>
+        <button onclick="addToCart('Girls Chunni 1', 12)">Add to Cart</button>
+      </div>
+
+      <!-- More Products -->
+      <div class="product">
+        <img src="girls_punjabi2.jpg" alt="Girls Punjabi 2" />
+        <h2>Girls Punjabi 2</h2>
+        <p>Price: ₹30</p>
+        <button onclick="addToCart('Girls Punjabi 2', 30)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt2.jpg" alt="Girls T-shirt 2" />
+        <h2>Girls T-shirt 2</h2>
+        <p>Price: ₹20</p>
+        <button onclick="addToCart('Girls T-shirt 2', 20)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress2.jpg" alt="Girls Slipless Dress 2" />
+        <h2>Girls Slipless Dress 2</h2>
+        <p>Price: ₹36</p>
+        <button onclick="addToCart('Girls Slipless Dress 2', 36)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress2.jpg" alt="Girls Night Dress 2" />
+        <h2>Girls Night Dress 2</h2>
+        <p>Price: ₹24</p>
+        <button onclick="addToCart('Girls Night Dress 2', 24)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings2.jpg" alt="Girls Leggings 2" />
+        <h2>Girls Leggings 2</h2>
+        <p>Price: ₹18</p>
+        <button onclick="addToCart('Girls Leggings 2', 18)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni2.jpg" alt="Girls Chunni 2" />
+        <h2>Girls Chunni 2</h2>
+        <p>Price: ₹13</p>
+        <button onclick="addToCart('Girls Chunni 2', 13)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_punjabi1.jpg" alt="Girls Punjabi 1" />
+        <h2>Girls Punjabi 1</h2>
+        <p>Price: ₹28</p>
+        <button onclick="addToCart('Girls Punjabi 1', 28)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt1.jpg" alt="Girls T-shirt 1" />
+        <h2>Girls T-shirt 1</h2>
+        <p>Price: ₹18</p>
+        <button onclick="addToCart('Girls T-shirt 1', 18)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress1.jpg" alt="Girls Slipless Dress 1" />
+        <h2>Girls Slipless Dress 1</h2>
+        <p>Price: ₹35</p>
+        <button onclick="addToCart('Girls Slipless Dress 1', 35)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress1.jpg" alt="Girls Night Dress 1" />
+        <h2>Girls Night Dress 1</h2>
+        <p>Price: ₹22</p>
+        <button onclick="addToCart('Girls Night Dress 1', 22)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings1.jpg" alt="Girls Leggings 1" />
+        <h2>Girls Leggings 1</h2>
+        <p>Price: ₹15</p>
+        <button onclick="addToCart('Girls Leggings 1', 15)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni1.jpg" alt="Girls Chunni 1" />
+        <h2>Girls Chunni 1</h2>
+        <p>Price: ₹12</p>
+        <button onclick="addToCart('Girls Chunni 1', 12)">Add to Cart</button>
+      </div>
+
+      <!-- More Products -->
+      <div class="product">
+        <img src="girls_punjabi2.jpg" alt="Girls Punjabi 2" />
+        <h2>Girls Punjabi 2</h2>
+        <p>Price: ₹30</p>
+        <button onclick="addToCart('Girls Punjabi 2', 30)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt2.jpg" alt="Girls T-shirt 2" />
+        <h2>Girls T-shirt 2</h2>
+        <p>Price: ₹20</p>
+        <button onclick="addToCart('Girls T-shirt 2', 20)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress2.jpg" alt="Girls Slipless Dress 2" />
+        <h2>Girls Slipless Dress 2</h2>
+        <p>Price: ₹36</p>
+        <button onclick="addToCart('Girls Slipless Dress 2', 36)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress2.jpg" alt="Girls Night Dress 2" />
+        <h2>Girls Night Dress 2</h2>
+        <p>Price: ₹24</p>
+        <button onclick="addToCart('Girls Night Dress 2', 24)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings2.jpg" alt="Girls Leggings 2" />
+        <h2>Girls Leggings 2</h2>
+        <p>Price: ₹18</p>
+        <button onclick="addToCart('Girls Leggings 2', 18)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni2.jpg" alt="Girls Chunni 2" />
+        <h2>Girls Chunni 2</h2>
+        <p>Price: ₹13</p>
+        <button onclick="addToCart('Girls Chunni 2', 13)">Add to Cart</button>
+      </div>
+
+      <!-- More Products -->
+      <div class="product">
+        <img src="girls_punjabi3.jpg" alt="Girls Punjabi 3" />
+        <h2>Girls Punjabi 3</h2>
+        <p>Price: ₹32</p>
+        <button onclick="addToCart('Girls Punjabi 3', 32)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt3.jpg" alt="Girls T-shirt 3" />
+        <h2>Girls T-shirt 3</h2>
+        <p>Price: ₹19</p>
+        <button onclick="addToCart('Girls T-shirt 3', 19)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress3.jpg" alt="Girls Slipless Dress 3" />
+        <h2>Girls Slipless Dress 3</h2>
+        <p>Price: ₹38</p>
+        <button onclick="addToCart('Girls Slipless Dress 3', 38)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress3.jpg" alt="Girls Night Dress 3" />
+        <h2>Girls Night Dress 3</h2>
+        <p>Price: ₹26</p>
+        <button onclick="addToCart('Girls Night Dress 3', 26)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings3.jpg" alt="Girls Leggings 3" />
+        <h2>Girls Leggings 3</h2>
+        <p>Price: ₹17</p>
+        <button onclick="addToCart('Girls Leggings 3', 17)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni3.jpg" alt="Girls Chunni 3" />
+        <h2>Girls Chunni 3</h2>
+        <p>Price: ₹14</p>
+        <button onclick="addToCart('Girls Chunni 3', 14)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_punjabi4.jpg" alt="Girls Punjabi 4" />
+        <h2>Girls Punjabi 4</h2>
+        <p>Price: ₹33</p>
+        <button onclick="addToCart('Girls Punjabi 4', 33)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt4.jpg" alt="Girls T-shirt 4" />
+        <h2>Girls T-shirt 4</h2>
+        <p>Price: ₹21</p>
+        <button onclick="addToCart('Girls T-shirt 4', 21)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_slipless_dress4.jpg" alt="Girls Slipless Dress 4" />
+        <h2>Girls Slipless Dress 4</h2>
+        <p>Price: ₹40</p>
+        <button onclick="addToCart('Girls Slipless Dress 4', 40)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_nightdress4.jpg" alt="Girls Night Dress 4" />
+        <h2>Girls Night Dress 4</h2>
+        <p>Price: ₹28</p>
+        <button onclick="addToCart('Girls Night Dress 4', 28)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="girls_leggings4.jpg" alt="Girls Leggings 4" />
+        <h2>Girls Leggings 4</h2>
+        <p>Price: ₹20</p>
+        <button onclick="addToCart('Girls Leggings 4', 20)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_chunni4.jpg" alt="Girls Chunni 4" />
+        <h2>Girls Chunni 4</h2>
+        <p>Price: ₹15</p>
+        <button onclick="addToCart('Girls Chunni 4', 15)">Add to Cart</button>
+      </div>
+
+      <!-- More Products -->
+      <div class="product">
+        <img src="girls_punjabi5.jpg" alt="Girls Punjabi 5" />
+        <h2>Girls Punjabi 5</h2>
+        <p>Price: ₹34</p>
+        <button onclick="addToCart('Girls Punjabi 5', 34)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="girls_tshirt5.jpg" alt="Girls T-shirt 5" />
+        <h2>Girls T-shirt 5</h2>
+        <p>Price: ₹18</p>
+        <button onclick="addToCart('Girls T-shirt 5', 18)">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <div class="load-more-container">
+      <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
+    </div>
+    
+    <script src="../assests/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys Clothing</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <!-- Removed inline CSS -->
+</head>
+<body>
+    <nav>
+        <button class="nav-toggle">☰ Menu</button>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="girls.html">Girls</a></li>
+            <li><a href="boys.html">Boys</a></li>
+            <li><a href="footwear.html">Footwear</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
+        </ul>
+    </nav>
+    <h1>Boys Clothing</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for items..." onkeyup="searchItems()">
+        <button onclick="searchItems()">Search</button>
+    </div>
+
+    <div class="filter-container">
+        <label for="priceRange">Filter by price:</label>
+        <input type="range" id="priceRange" min="0" max="100" step="5" oninput="filterByPrice(this.value)">
+        <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="product-container" id="productContainer">
+
+        <div class="product">
+            <img src="s1" alt="Boys Shirt 1">
+            <h2>Boys Shirt 1</h2>
+            <p>Price: ₹20</p>
+            <button onclick="addToCart('Boys Shirt 1', 20)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="sh2.webp" alt="Boys T-shirt 1">
+            <h2>Boys T-shirt 1</h2>
+            <p>Price: ₹18</p>
+            <button onclick="addToCart('Boys T-shirt 1', 18)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="s2" alt="Boys Shirt 2">
+            <h2>Boys Shirt 2</h2>
+            <p>Price: ₹22</p>
+            <button onclick="addToCart('Boys Shirt 2', 22)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="sh 1.jpg" alt="Boys T-shirt 2">
+            <h2>Boys T-shirt 2</h2>
+            <p>Price: ₹19</p>
+            <button onclick="addToCart('Boys T-shirt 2', 19)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="su1.jfif" alt="Boys Suit 1">
+            <h2>Boys Suit 1</h2>
+            <p>Price: ₹40</p>
+            <button onclick="addToCart('Boys Suit 1', 40)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="s3.jfif" alt="Boys Shirt 3">
+            <h2>Boys Shirt 3</h2>
+            <p>Price: ₹25</p>
+            <button onclick="addToCart('Boys Shirt 3', 25)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="sh3.jfif" alt="Boys T-shirt 3">
+            <h2>Boys T-shirt 3</h2>
+            <p>Price: ₹21</p>
+            <button onclick="addToCart('Boys T-shirt 3', 21)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="s4.webp" alt="Boys Shirt 4">
+            <h2>Boys Shirt 4</h2>
+            <p>Price: ₹30</p>
+            <button onclick="addToCart('Boys Shirt 4', 30)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="sh4.jfif" alt="Boys T-shirt 4">
+            <h2>Boys T-shirt 4</h2>
+            <p>Price: ₹15</p>
+            <button onclick="addToCart('Boys T-shirt 4', 15)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="su2.jpg" alt="Boys Suit 2">
+            <h2>Boys Suit 2</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Boys Suit 2', 50)">Add to Cart</button>
+        </div>
+      
+        <div class="product">
+            <img src="p3.avif" alt="Boys Pants 3">
+            <h2>Boys Pants 3</h2>
+            <p>Price: ₹33</p>
+            <button onclick="addToCart('Boys Pants 3', 33)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="so3.jpg" alt="Boys Shorts 3">
+            <h2>Boys Shorts 3</h2>
+            <p>Price: ₹22</p>
+            <button onclick="addToCart('Boys Shorts 3', 22)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="d3.jfif" alt="Boys Dhoti 3">
+            <h2>Boys Dhoti 3</h2>
+            <p>Price: ₹42</p>
+            <button onclick="addToCart('Boys Dhoti 3', 42)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="p4.webp" alt="Boys Pants 4">
+            <h2>Boys Pants 4</h2>
+            <p>Price: ₹35</p>
+            <button onclick="addToCart('Boys Pants 4', 35)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="so4.avif" alt="Boys Shorts 4">
+            <h2>Boys Shorts 4"></h2>
+            <p>Price: ₹25</p>
+            <button onclick="addToCart('Boys Shorts 4', 25)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="d4.jfif" alt="Boys Dhoti 4">
+            <h2>Boys Dhoti 4</h2>
+            <p>Price: ₹45</p>
+            <button onclick="addToCart('Boys Dhoti 4', 45)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="p5.jfif" alt="Boys Pants 5">
+            <h2>Boys Pants 5</h2>
+            <p>Price: ₹38</p>
+            <button onclick="addToCart('Boys Pants 5', 38)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="so5.jpg" alt="Boys Shorts 5">
+            <h2>Boys Shorts 5</h2>
+            <p>Price: ₹26</p>
+            <button onclick="addToCart('Boys Shorts 5', 26)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="d5.jfif" alt="Boys Dhoti 5">
+            <h2>Boys Dhoti 5</h2>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Boys Dhoti 5', 50)">Add to Cart</button>
+        </div>
+
+    </div>
+    
+    <div class="load-more-container">
+      <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
+    </div>
+    
+    <script src="../assests/js/script.js"></script>
+    
+</body>
+</html>
