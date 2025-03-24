@@ -334,11 +334,6 @@ h1 {
 /* Styles for cart.html */
 #cart-items {
     text-align: center;
-    margin: 20px;
-}
-
-.cart-item {
-    margin: 10px 0;
 }
 
 .filter-container {
@@ -507,3 +502,123 @@ h1 {
 }
 
 /* Remove duplicate CSS rules that were causing conflicts */
+
+/* Category Boxes Styling */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.category-box {
+  height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.category-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+  color: white;
+  text-align: center;
+}
+
+.category-content h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.category-content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.category-button {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: white;
+  color: #ff7f50;
+  transform: scale(1.05);
+}
+
+/* Category background images */
+.women-bg {
+  background-image: url('../img/women-category.jpg');
+}
+
+.men-bg {
+  background-image: url('../img/men-category.jpg');
+}
+
+.girls-bg {
+  background-image: url('../img/girls-category.jpg');
+}
+
+.boys-bg {
+  background-image: url('../img/boys-category.jpg');
+}
+
+.footwear-bg {
+  background-image: url('../img/footwear-category.jpg');
+}
+
+/* Responsive adjustments for category boxes */
+@media (max-width: 768px) {
+  .category-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .category-box {
+    height: 280px;
+  }
+  
+  .category-content h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+}

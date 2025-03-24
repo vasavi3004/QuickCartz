@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footwear</title>
-    <link rel="stylesheet" href="../assests/css/style.css">  
+    <link rel="stylesheet" href="./assests/css/style.css">  
 </head>
 <body>
     <nav>
@@ -30,7 +30,7 @@
 
     <div class="filter-container">
         <label for="priceRange">Filter by price:</label>
-        <input type="range" id="priceRange" min="0" max="100" step="5" oninput="filterByPrice(this.value)">
+        <input type="range" id="priceRange" min="0" max="100" step="5" value="100" oninput="filterByPrice(this.value)">
         <span id="priceValue">₹100</span>
     </div>
 
@@ -101,6 +101,6 @@
       <button id="loadMoreButton" onclick="loadMoreProducts()">Load More</button>
     </div>
     
-    <script src="../assests/js/script.js"></script>
+    <script src="./assests/js/script.js"></script>
 </body>
 </html>

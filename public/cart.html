@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <style>
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
-<body style="height: 100vh;">
+<body>
     <nav>
         <button class="nav-toggle">☰ Menu</button>
         <ul>
@@ -20,80 +44,50 @@
             <li><a href="../index.html" id="login-link" class="login-button">Login</a></li>
         </ul>
     </nav>
-
-    <h1>Your Shopping Cart</h1>
-    <div id="cart-items">
-
-    </div>
-    <button id="placeOrderButton" onclick="showOrderForm()" disabled>Place Order</button>
-
-    <div class="order-form" id="orderForm">
-        <h2>Order Form</h2>
-        <form action="https://sheetdb.io/api/v1/g45bi3iek5q9n" method="post" id="sheetdb-form">
-            <input type="text" name="data[name]" placeholder="Name" required>
-            <input type="text" name="data[address]" placeholder="Address" required>
-            <input type="number" maxlength="10" minlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="data[phone]" placeholder="Phone" required>
-            <!-- Hidden fields to store cart items and prices -->
-            <input type="hidden" name="data[items]" id="cart-items-input">
-            <input type="hidden" name="data[total_price]" id="cart-total-input">
-            <!-- Hidden field for timestamp -->
-            <input type="hidden" name="data[timestamp]" id="timestamp-input">
-            <button type="submit">Submit Order</button>
-        </form>
-    </div>
-
-    <script src="../assests/js/script.js"></script>
-    <script>
-        // Function to prepare cart data for submission
-        function prepareCartData() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let itemsList = '';
-            let totalPrice = 0;
-            
-            // Create a formatted string of all items
-            cart.forEach((item, index) => {
-                itemsList += `${item.item} (₹${item.price})${index < cart.length - 1 ? ', ' : ''}`;
-                totalPrice += parseFloat(item.price);
-            });
-            
-            // Set the values to hidden inputs
-            document.getElementById('cart-items-input').value = itemsList;
-            document.getElementById('cart-total-input').value = totalPrice.toFixed(2);
-            
-            // Add current timestamp
-            const now = new Date();
-            const timestampStr = now.toISOString().replace('T', ' ').substring(0, 19);
-            document.getElementById('timestamp-input').value = timestampStr;
-        }
+    
+    <section id="cart-items">
+        <h2>Your Cart</h2>
+        <div id="cart-list"></div>
+    </section>
+    
+    <section class="order-form">
+        <h2>Delivery Information</h2>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+        <input type="text" id="address" placeholder="Enter your address" required>
+        <input type="text" id="pin-code" placeholder="Enter your pin code" required>
         
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          
-          // Prepare cart data before submission
-          prepareCartData();
-          
-          // Show confirmation alert before sending data to SheetDB
-          if(confirm('Your order is ready to be placed. Proceed with order submission?')) {
-            // Show processing message
-            alert('Processing your order...');
-            
-            fetch(form.action, {
-                method : "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-              // Clear cart after successful submission
-              localStorage.removeItem('cart');
-              alert('Order submitted successfully!');
-              window.location.href = 'home.html'; // Use location.href for better navigation
-            }).catch(error => {
-              console.error('Error:', error);
-              alert('There was an error submitting your order. Please try again.');
-            });
-          }
-        });
-    </script>
+        <h2>Delivery Options</h2>
+        <select id="delivery">
+            <option value="one-day">One-Day Delivery</option>
+            <option value="custom-date">Select Specific Date</option>
+        </select>
+        <input type="date" id="custom-date" style="display: none;">
+        
+        <select id="late-night">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        
+        <h2>Payment Options</h2>
+        <select id="payment-method">
+            <option value="cod">Cash on Delivery</option>
+            <option value="gpay">Google Pay</option>
+            <option value="phonepay">Phone Pay</option>
+            <option value="credit-card">Credit Card</option>
+        </select>
+        <input type="text" id="payment-details" placeholder="Enter Payment Details" style="display: none;">
+        
+        <button id="placeOrderButton" onclick="placeOrder()">Confirm Order</button>
+    </section>
+    
+    <section id="order-tracking">
+        <h2>Order Tracking</h2>
+        <p>Status: <span id="tracking-status">Not Placed</span></p>
+        <p>Estimated Delivery Time: <span id="delivery-time">-</span></p>
+    </section>
+
+
+    <script src="./assests/js/script.js"></script>
 </body>
 </html>
