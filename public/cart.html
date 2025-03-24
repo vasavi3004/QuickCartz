@@ -28,6 +28,9 @@
         button:hover {
             background-color: #218838;
         }
+        .hidden {
+            display: none !important; /* Added !important to override other styles */
+        }
     </style>
 </head>
 <body>
@@ -48,9 +51,10 @@
     <section id="cart-items">
         <h2>Your Cart</h2>
         <div id="cart-list"></div>
+        <p id="empty-cart-message" style="display: none;">Your cart is empty. <a href="home.html">Continue shopping</a></p>
     </section>
     
-    <section class="order-form">
+    <section class="order-form" >
         <h2>Delivery Information</h2>
         <input type="text" id="name" placeholder="Enter your name" required>
         <input type="text" id="phone" placeholder="Enter your phone number" required>

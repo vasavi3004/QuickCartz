@@ -76,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartList = document.getElementById('cart-list');
     if (cartList) {
         displayCart();
+        
+        // Check and update order form visibility immediately after displaying cart
+        updateOrderFormVisibility();
     }
 });
 
@@ -86,7 +89,11 @@ window.addToCart = function(item, price) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item + ' has been added to your cart!');
     updatePlaceOrderButton();
+    
+    // Update order form visibility when adding items to cart
+    updateOrderFormVisibility();
 }
+
 
 // Search functionality
 window.searchItems = function() {
@@ -159,6 +166,9 @@ function displayCart() {
             `;
         });
     }
+    
+    // Update order form visibility after displaying cart
+    updateOrderFormVisibility();
 }
 
 window.removeItem = function(index) {
@@ -167,6 +177,9 @@ window.removeItem = function(index) {
     localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
     displayCart(); // Refresh cart display
     updatePlaceOrderButton();
+    
+    // Update order form visibility after removing item
+    updateOrderFormVisibility();
 }
 
 function updatePlaceOrderButton() {
@@ -252,6 +265,24 @@ window.loadMoreProducts = function() {
         const loadMoreBtn = document.getElementById('loadMoreButton');
         if (loadMoreBtn) {
             loadMoreBtn.style.display = 'none';
+        }
+    }
+}
+
+// Function to update order form visibility based on cart contents
+function updateOrderFormVisibility() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const orderForm = document.querySelector('.order-form');
+    const emptyCartMessage = document.getElementById('empty-cart-message');
+    
+    if (orderForm) {
+        // Show order form if cart has items, hide if empty
+        if (cart.length > 0) {
+            orderForm.style.display = 'block';
+            if (emptyCartMessage) emptyCartMessage.style.display = 'none';
+        } else {
+            orderForm.style.display = 'none';
+            if (emptyCartMessage) emptyCartMessage.style.display = 'block';
         }
     }
 }

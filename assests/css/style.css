@@ -410,14 +410,14 @@ h1 {
 
 .order-form {
     display: none;
-    margin: 20px;
+    margin: 20px auto;
     text-align: center;
 }
 
 .order-form input {
     padding: 10px;
     margin: 5px;
-    width: 300px;
+    width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
